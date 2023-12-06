@@ -9,9 +9,6 @@ from nltk.tokenize import word_tokenize
 nltk.download("wordnet")
 nltk.download("punkt")
 
-#situacional:
-os.environ['REQUESTS_CA_BUNDLE'] = 'paloalto.uniube.br.crt' #instancia o certificado uniube, para chamada de api externa
-
 class treinamento: #classe de treinamento
     def __init__(self): #incia as variáveis
         self.dados = pd.read_csv('dados.csv') #lê o arquivo de treinamento 
