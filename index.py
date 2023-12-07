@@ -19,10 +19,6 @@ def processar_redacao():
     return render_template("mostraresultado.html",
                             resultado = resultado,
                             redacao = redacao)
-    
-    
-    
-    
 
 #rodar o site
 if __name__ == "__main__":

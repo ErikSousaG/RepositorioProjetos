@@ -1,7 +1,9 @@
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
@@ -30,27 +32,45 @@ label {
 }
 
 textarea {
-    padding: 10px;
-    margin-bottom: 20px;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    resize: none;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
 }
 
 button {
     background-color: #2ecc71;
     color: white;
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
     border: none;
+    width: 100%;
+    font-size: 16px;
 }
 
 button:hover {
     background-color: #27ae60;
 }
-
-/* #resultadoDiv {
-    display: none;
+#resultadoDiv {
+    display: flex;
     max-width: 800px;
     margin-top: 20px;
-} */
+    padding: 20px;
+    align-items: center;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+}
+#barraprogressoDiv{        
+    display: flex;
+    max-height: 100px;
+    background-color: #2ecc71;  
+}
 
 footer {
     background-color: #2c3e50;

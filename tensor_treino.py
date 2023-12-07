@@ -1,5 +1,4 @@
 import pandas as pd
-import os
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import nltk
@@ -11,12 +10,12 @@ nltk.download("punkt")
 
 class treinamento: #classe de treinamento
     def __init__(self): #incia as variáveis
-        self.dados = pd.read_csv('dados.csv') #lê o arquivo de treinamento 
-        """ self.dados = self.dados[:int(len(self.dados)/2)] """  #lê metade dos arquivos, casa o treinamento fique muito pesado            
-        self.X_treino = [self.preprocessa(texto) for texto in self.dados['texto']] #preprocessa os textos para treinamento
-        self.model = self.constroi_modelo() #constroi o modelo de ml
-        self.y_treino = self.dados['nota'] #salvas a notas dadas em uma variavel
-        self.tamanho = 0 #variável que guarda o tamanho da redação
+        self.dados      = pd.read_csv('dados.csv') #lê o arquivo de treinamento 
+        """self.dados   = self.dados[:int(len(self.dados)/2)] """  #lê metade dos arquivos, casa o treinamento fique muito pesado            
+        self.X_treino   = [self.preprocessa(texto) for texto in self.dados['texto']] #preprocessa os textos para treinamento
+        self.model      = self.constroi_modelo() #constroi o modelo de ml
+        self.y_treino   = self.dados['nota'] #salvas a notas dadas em uma variavel
+        self.tamanho    = 0 #variável que guarda o tamanho da redação
         self.tentativas = 0 #variável que guarda a qtde de tentativas de treinamento, utilizada para evitar que o treino ocorra infinitamente
         
     def preprocessa2(self,nota): #função que preprocessa as notas, caso haja número quebrado

@@ -14,12 +14,18 @@
         <div>
             <h2>Redação: </h2>
             <textarea id="redacao" name="redacao" rows="16" cols="80" readonly>{{redacao}}</textarea> 
-               
-            <h2>Nota: </h2>
-            <p>{{ resultado }}</p>
+            
+            <div id="resultadoDiv">
+                <div id="barraprogressoDiv" style="width: {{resultado}}%">
+                    <h2>Nota: {{ resultado }}/100</h2> 
+                </div>            
+            </div>
+            
             <br>
             <a href="/">Voltar</a>
-        </div>
-    
+        </div>    
     </main>
+    <footer>
+        <p>&copy; 2023 Corretora de Redações. Todos os direitos reservados.</p>
+    </footer>
 </body>

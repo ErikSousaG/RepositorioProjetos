@@ -14,7 +14,7 @@ def retorna(redacao):
             
         redacao = [treinamento.preprocessa(redacao)] #preprocessa a redação
        
-        if treinamento.tamanho < 4:
+        if treinamento.tamanho < 4: #verifica se o tamanho da redação é insuficiente
             return "0"
         else:
             redacao = tokenizador(redacao) #tokeniza a redação, de acordo com o dicionário
